@@ -15,6 +15,7 @@ if(!port || !proxyDomain){
   console.log('USAGE:');
   console.log('cd /my/single/app/root');
   console.log('node /path/to/simple/proxy/sp.js <PORT-TO-SERVE> <DOMAIN-TO-PROXY>');
+  process.exit(0);
 }
 
 function makeNDigits(str, nb, separator, before){
