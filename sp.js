@@ -101,7 +101,7 @@ function staticServer(request, response) {
 // static server 
 function proxyServer(req,res) {
   var filename = url.parse(req.url).pathname;
-  var portForwardedTo = proxyDomain.indexOf(':') === -1 ? '443' : proxyDomain.substr(proxyDomain.indexOf(':')+1);
+  var portForwardedTo = proxyDomain.indexOf(':') === -1 ? '80' : proxyDomain.substr(proxyDomain.indexOf(':')+1);
   var domainForwardedTo = proxyDomain.indexOf(':') === -1 ? proxyDomain : proxyDomain.substr(0, proxyDomain.indexOf(':'));
   var options = {
     hostname: domainForwardedTo,
